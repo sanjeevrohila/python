@@ -7,6 +7,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG,format='(%(threadName)-9s) %(message)s', )
 
 def task(event):
+    #threading.currentThread() FUNCTION determines the current thread
     logging.info("Starting the Task - %s"%(threading.currentThread().getName()))
 
     while not event.is_set():
